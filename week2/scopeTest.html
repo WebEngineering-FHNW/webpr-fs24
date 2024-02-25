@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Scope Tests</title>
+</head>
+<body>
+    <script>
+
+        const test = x => document.writeln( String(x));
+
+        let x = 0;
+        function foo() {
+            let x = 1;
+            document.writeln(String(x));
+        }
+        foo();
+        document.writeln(String(x));
+
+        // test( id(id) === id);
+        // test( Konst(id)(undefined) === id);
+        // test( Kite(undefined)(id) === id);
+
+    </script>
+</body>
+</html>
+
