@@ -9,17 +9,24 @@
 
         const test = x => document.writeln( String(x));
 
-        let x = 0;
-        function foo() {
-            let x = 1;
+        x = 0;  // even if done badly...
+
+        ( () => {       // IIFE for a local scope
+            let x = 1;  // does not accidentally override outer scope
             document.writeln(String(x));
-        }
-        foo();
+        }) ();
         document.writeln(String(x));
 
-        // test( id(id) === id);
-        // test( Konst(id)(undefined) === id);
-        // test( Kite(undefined)(id) === id);
+        // lambda calculus
+        const id    = x => x;
+        const Konst = x => y => x;
+        const Kite  = y => x => x  ;
+
+        // used in JavaScript
+
+        test( id(id) === id);
+        test( Konst(id)(undefined) === id);
+        test( Kite(undefined)(id) === id);
 
     </script>
 </body>
