@@ -20,7 +20,12 @@
         // lambda calculus
         const id    = x => x;
         const Konst = x => y => x;
-        const Kite  = y => x => x  ;
+
+        // const Kite = x => y => y;        // beta expand with id
+        // const Kite = x => y => id(y);    // eta reduce
+        // const Kite = x => id;            // beta expand with Konst
+        // const Kite = x => Konst(id)(x);  // eta reduce
+        const Kite = Konst(id);
 
         // used in JavaScript
 
