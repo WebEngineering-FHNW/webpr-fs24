@@ -42,13 +42,17 @@ function changeDirection(orientation) {
 */
 function safeGetElementById(id) {
     const result = document.getElementById(id);
-    return result === null; // todo: your code here
+    return result === null
+           ? Left("there is no element with id '" + id +"'")
+           : Right(result);  // todo: your code here
 }
 
 const log = s => console.log(s);
 
 function start() {
-
+    either(safeGetElementById("canvas"))
+       ( msg => console.error(msg))
+       ( canvas => startWithCanvas(canvas));
     // todo: if safeGetElementById("canvas") yields an error message, log it. Otherwise startWithCanvas
 
 }
