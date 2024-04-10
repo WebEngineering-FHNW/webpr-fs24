@@ -86,7 +86,7 @@
             worklog: worklog,
             work:    () => worklog.push(worker.work())
         };
-
+        Object.setPrototypeOf(result, Person.prototype);
         return result
     }
 
