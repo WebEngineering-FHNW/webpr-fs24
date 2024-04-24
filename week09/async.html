@@ -11,7 +11,27 @@
 <script>
     // Example
 
-    // 'https://jsonplaceholder.typicode.com/todos/1'
+    // fetch('https://jsonplaceholder.typicode.com/todos/1')
+    //     .then( response => response.json())
+    //     .then( todo     => console.log(2, todo.title))
+    //     .catch( err     => console.error("my error:", err));
+
+    /** @type { (Number) => Promise<Number> } */
+    const processEven = i => new Promise( (resolve, reject) => {
+        if ( i % 2 === 0) {
+            resolve(i);
+        } else {
+            reject(i);
+        }
+    });
+
+    processEven(4)
+        .then( n => {console.log(n); return n})
+        .then( n => processEven(n+1))
+        .then( n => {console.log("sollte man nicht sehen!", n); return n})
+        .catch( n => console.error("error: ", n));
+
+
 
 
 </script>

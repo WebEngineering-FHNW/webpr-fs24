@@ -7,7 +7,7 @@
 })();
 
 try { // test x is not in scope
-    x;
+    fetch('https://jsonplaceholder.typicode.com/todos/1');
     document.writeln(false)
 } catch (e) {
     document.writeln(true)
