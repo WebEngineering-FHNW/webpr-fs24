@@ -15,7 +15,7 @@ export { eq$ }
  *          (it2: Iterable<_T_>)
  *          => Boolean
  *       }
- * @attention This function only works if at least one iterable is finite as indicated by the name ending with '$'.
+ * @attention This function only works if at least one MyIterable is finite as indicated by the name ending with '$'.
  *
  * @example
  * const numbers = [0, 1, 2, 3];

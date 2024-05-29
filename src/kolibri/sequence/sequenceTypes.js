@@ -74,7 +74,7 @@
  *              - example: `Seq(1, 2).pipe(map(x => x * 2), drop(1)) ['=='] (Seq(4))`
  * @property { ReverseOperationType<_T_> } reverse$
  *             - Type: {@link ReverseOperationType}
- *             - Processes the iterable backwards, *Works only on finite sequences!*.
+ *             - Processes the MyIterable backwards, *Works only on finite sequences!*.
  *             - example: `Seq(1, 2, 3).reverse$() ['=='] (Seq(3, 2, 1))`
  * @property { SnocOperationType<_T_> } snoc
  *             - Type: {@link SnocOperationType}

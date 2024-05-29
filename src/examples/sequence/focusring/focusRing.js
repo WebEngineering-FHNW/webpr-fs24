@@ -19,7 +19,7 @@ export { FocusRing }
  */
 const FocusRing = nonEmptyIterable => {
   if (isEmpty(nonEmptyIterable)) {
-    throw new Error("FocusRing: Can't construct a focus ring from an empty iterable!");
+    throw new Error("FocusRing: Can't construct a focus ring from an empty MyIterable!");
   }
   return FocusRingImpl(nil, toSeq(nonEmptyIterable));
 };

@@ -22,7 +22,7 @@ addToTestingTable(testSuite)(
   })
 );
 
-testSuite.add("test empty sequence: snoc an element to empty iterable", assert => {
+testSuite.add("test empty sequence: snoc an element to empty MyIterable", assert => {
   // When
   const result = snoc(42)(nil);
 

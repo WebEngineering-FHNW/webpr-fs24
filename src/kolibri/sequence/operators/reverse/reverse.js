@@ -4,14 +4,14 @@ import {iteratorOf}            from "../../util/helpers.js";
 export { reverse$ }
 
 /**
- * Processes the iterable backwards.
+ * Processes the MyIterable backwards.
  * @typedef ReverseOperationType
  * @template _T_
  * @function
  * @pure
  * @haskell [a] -> [a]
  * @type {
- *             (iterable: Iterable<_T_>)
+ *             (MyIterable: Iterable<_T_>)
  *          => SequenceType<_T_>
  *       }
  *

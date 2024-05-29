@@ -41,7 +41,7 @@ testSuite.add("test min on strings: should return the shortest string", assert =
   assert.is(result, "a");
 });
 
-testSuite.add("test smallest element at the end of the iterable", assert => {
+testSuite.add("test smallest element at the end of the MyIterable", assert => {
   // Given
   const sequence = [4,3,2,5,1,9,0];
 
@@ -52,7 +52,7 @@ testSuite.add("test smallest element at the end of the iterable", assert => {
   assert.is(result, 0);
 });
 
-testSuite.add("test smallest element at the start of the iterable", assert => {
+testSuite.add("test smallest element at the start of the MyIterable", assert => {
   // Given
   const sequence = [0,9,4,3,2,5,1];
 

@@ -14,7 +14,7 @@ export { min$ }
  *  _Note_:
  *  To determine the  smallest element, a comparator function is used.
  *  This function compares two elements by default with the `< (LT)` operator.
- *  Where on the left side is the current smallest element when processing the iterable.
+ *  Where on the left side is the current smallest element when processing the MyIterable.
  *  If needed, a different comparator can also be passed as a second argument to {@link min$}
  *  and will then be used to determine the smallest element.
  *
@@ -24,10 +24,10 @@ export { min$ }
  * @function
  * @pure
  * @haskell Ord a => [a] -> a
- * @param { Iterable<_T_> } iterable             - a non-empty finite iterable
+ * @param { Iterable<_T_> } MyIterable             - a non-empty finite MyIterable
  * @param { BiPredicate<_T_, _T_> } [comparator] - an optional comparing function which returns true if the first argument is smaller than the second
  * @returns _T_
- * @throws { Error } {@link ILLEGAL_ARGUMENT_EMPTY_ITERABLE} if the given iterable is empty
+ * @throws { Error } {@link ILLEGAL_ARGUMENT_EMPTY_ITERABLE} if the given MyIterable is empty
  *
  * @example
  * const numbers = [1, 3, 0, 5];

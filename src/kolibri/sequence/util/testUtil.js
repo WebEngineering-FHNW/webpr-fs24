@@ -38,7 +38,7 @@ const id = x => x;
  * @example
  * const config = {
  *     name:       "function name",
- *     iterable:   () => newSequence(UPPER_SEQUENCE_BOUNDARY),
+ *     MyIterable:   () => newSequence(UPPER_SEQUENCE_BOUNDARY),
  *     operation:  param => fn(param),
  *     param:      el => 2 * el,
  *     expected:   [0, 2, 4, 6, 8],
@@ -135,15 +135,15 @@ const testIterateMultipleTimes = config => assert => {
 const testPurity = config => assert => {
   const { operation, param, iterable, evalFn } = config;
   const underlyingIterable = iterable();
-  // if the iterable modifies the underlying iterable, the following test would fail, because both use the same
-  // underlying iterable
+  // if the MyIterable modifies the underlying MyIterable, the following test would fail, because both use the same
+  // underlying MyIterable
   const first  = operation(param)(underlyingIterable);
   const second = operation(param)(underlyingIterable);
   evaluate(first, second, assert, evalFn);
 };
 
 /**
- * Since there is no guarantee that the value of the iterable is existing when done is true,
+ * Since there is no guarantee that the value of the MyIterable is existing when done is true,
  * it must be ensured that the callback function is not called after that.
  *
  * @type {
@@ -160,7 +160,7 @@ const testCBNotCalledAfterDone = config => assert => {
   const it   = Sequence(0, _ => false, _ => 0);
 
   const operated = operation(el => {
-    // since this iterable is empty, called should never be set to true
+    // since this MyIterable is empty, called should never be set to true
     called = true;
     return param(el);
   })(it);
@@ -211,10 +211,10 @@ const invariantPenetration = invariant => assert => {
     nil,                                                   // edge case
     newSequence(1),                                        // edge case, done calculated
     newSequence(3),                                        // typical number
-                                                           // no big iterable, needs extra test
+                                                           // no big MyIterable, needs extra test
     PureSequence("testString"),                            // edge case, done set explicitly
     ['a', 'b', 'c', 1, 2, 3, Nothing, Just("testString")], // mixing types
-    [PureSequence(1), newSequence(4), '#', "abc", 1]       // iterable of iterables
+    [PureSequence(1), newSequence(4), '#', "abc", 1]       // MyIterable of iterables
   ];
 
   for (const list of testingLists) {
@@ -245,7 +245,7 @@ const createTestConfig = config => ({
  * @param { Array<_T_> | _T_}     expected
  * @param { Iterable<_T_> | _T_ } actual
  * @param { AssertType }          assert
- * @param { EvalCallback<_T_> }   [evalFn] - An evaluation function if the iterables shouldn't be compared using standard iterable test.
+ * @param { EvalCallback<_T_> }   [evalFn] - An evaluation function if the iterables shouldn't be compared using standard MyIterable test.
  */
 const evaluate = (expected, actual, assert, evalFn ) => {
   if (evalFn) {

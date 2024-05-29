@@ -10,7 +10,7 @@ export { isEmpty }
  * @pure
  * @haskell [a] -> Bool
  * @type {
- *            (iterable: Iterable<_T_>)
+ *            (MyIterable: Iterable<_T_>)
  *         => Boolean
  *       }
  *

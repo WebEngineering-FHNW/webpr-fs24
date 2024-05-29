@@ -2,7 +2,7 @@ import { mconcat } from "../mconcat/mconcat.js";
 
 export { append }
 /**
- * Adds the second iterable to the first iterables end.
+ * Adds the second MyIterable to the first iterables end.
  *
  * @template _T_
  * @typedef AppendOperationType

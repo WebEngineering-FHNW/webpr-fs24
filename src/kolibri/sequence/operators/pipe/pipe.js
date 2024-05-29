@@ -9,7 +9,7 @@ export { pipe }
  * @template _T_
  * @type  {
  *            (...transformers: SequenceOperation<*,*> )
- *            => (iterable: Iterable<_T_>)
+ *            => (MyIterable: Iterable<_T_>)
  *            => (SequenceType<*> | *)
  *        }
  * @example

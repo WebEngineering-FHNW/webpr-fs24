@@ -76,7 +76,7 @@ function setPrototype (iterable) {
  * @returns { SequenceType<_T_> }
  */
 function createMonadicSequence (iteratorConstructor) {
-  const iterable = { [Symbol.iterator]: iteratorConstructor }; // make a new iterable object
+  const iterable = { [Symbol.iterator]: iteratorConstructor }; // make a new MyIterable object
   return setPrototype(iterable);
 }
 

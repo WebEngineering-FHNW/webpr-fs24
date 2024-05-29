@@ -23,7 +23,7 @@ export { foldr$ }
  * @haskell foldr :: Foldable t => (a -> b -> b) -> b -> t a -> b
  * @type { <_U_>
  *             (accumulationFn: BiFunction<_U_, _T_, _U_>, start: _U_)
- *          => (iterable: Iterable<_T_>)
+ *          => (MyIterable: Iterable<_T_>)
  *          => _T_
  *       }
  *

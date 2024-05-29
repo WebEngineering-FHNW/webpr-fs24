@@ -60,8 +60,8 @@ const addToTotal = num => total.setValue( num + total.getValue());
 
 /**
  * @callback IterableEq
- * @param { Iterable<*> } actual            - the actual iterable
- * @param { Iterable<*> } expected          - an iterable with the expected elements
+ * @param { Iterable<*> } actual            - the actual MyIterable
+ * @param { Iterable<*> } expected          - an MyIterable with the expected elements
  * @param { number } [maxElementsToConsume] - if set, the thrown errors message will be compared to this string
  * @returns void
  */
@@ -120,8 +120,8 @@ const Assert = () => {
         },
         iterableEq: (actual, expected, maxElementsToConsume = 1_000) => {
 
-            if (actual[Symbol.iterator]   === undefined) log.error("actual is not iterable!");
-            if (expected[Symbol.iterator] === undefined) log.error("expected is not iterable!");
+            if (actual[Symbol.iterator]   === undefined) log.error("actual is not MyIterable!");
+            if (expected[Symbol.iterator] === undefined) log.error("expected is not MyIterable!");
 
             const actualIt     = actual[Symbol.iterator]();
             const expectedIt   = expected[Symbol.iterator]();

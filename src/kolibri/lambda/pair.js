@@ -42,7 +42,7 @@ export { Pair }
  * values(fst) === "Tobi";
  * values(snd) === "Andri";
  *
- * // a pair is also iterable
+ * // a pair is also MyIterable
  * const [tobi, andri] = values;
  * console.log(tobi, andri);
  * // => Logs '"Tobi", "Andri"'

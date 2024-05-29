@@ -16,7 +16,7 @@ export { max$ }
  *  _Note_:
  *  To determine the largest element, a comparator function is used.
  *  This function compares two elements by default with the `< (LT)` operator,
- *  where on the left side is the current largest element when processing the iterable.
+ *  where on the left side is the current largest element when processing the MyIterable.
  *  If needed, a different comparator can also be passed as a second argument to {@link max$}
  *  and will then be used to determine the largest element.
  * @typedef MaxOperationType
@@ -24,10 +24,10 @@ export { max$ }
  * @function
  * @pure
  * @haskell Ord a => [a] -> a
- * @param { Iterable<_T_> }         iterable     - a non-empty finite iterable
+ * @param { Iterable<_T_> }         MyIterable     - a non-empty finite MyIterable
  * @param { BiPredicate<_T_, _T_> } [comparator] - an optional comparing function which returns true if the second argument is larger than the first
  * @returns _T_
- * @throws { Error } {@link ILLEGAL_ARGUMENT_EMPTY_ITERABLE} if the given iterable is empty
+ * @throws { Error } {@link ILLEGAL_ARGUMENT_EMPTY_ITERABLE} if the given MyIterable is empty
  *
  * @example
  * const numbers = [1, 3, 0, 5];

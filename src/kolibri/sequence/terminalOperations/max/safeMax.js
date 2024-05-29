@@ -16,7 +16,7 @@ export { safeMax$ }
  *  _Note_:
  *  To determine the largest element, a comparator function is used.
  *  This function compares two elements by default with the `< (LT)` operator,
- *  where on the left side is the current largest element when processing the iterable.
+ *  where on the left side is the current largest element when processing the MyIterable.
  *  If needed, a different comparator can also be passed as a second argument to {@link safeMax$}
  *  and will then be used to determine the largest element.
  *
@@ -25,7 +25,7 @@ export { safeMax$ }
  * @function
  * @pure
  * @haskell Ord a => [a] -> Maybe a
- * @param { Iterable<_T_> }         iterable     - a finite iterable
+ * @param { Iterable<_T_> }         MyIterable     - a finite MyIterable
  * @param { BiPredicate<_T_, _T_> } [comparator] - an optional comparing function which returns true if the second argument is larger than the first
  * @returns MaybeType<_T_>
  *
@@ -34,7 +34,7 @@ export { safeMax$ }
  * const maybeMax = safeMax$(numbers);
  *
  * maybeMax
- *  (_ => console.log('iterable was empty, no max!')
+ *  (_ => console.log('MyIterable was empty, no max!')
  *  (x => console.log(x));
  * // => Logs '5'
  */
@@ -54,7 +54,7 @@ const safeMax$ = (iterable, comparator = (a, b) => a < b) => {
 
 
   if (isEmpty) {
-    // iterable is empty, no max can be found
+    // MyIterable is empty, no max can be found
     return Nothing;
   }
 

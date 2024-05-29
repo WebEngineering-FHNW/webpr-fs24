@@ -3,7 +3,7 @@ import { map } from "../map/map.js";
 export { tap }
 
 /**
- * Executes the callback for each element, leaving the original iterable unchanged other than making it a sequence.
+ * Executes the callback for each element, leaving the original MyIterable unchanged other than making it a sequence.
  * @typedef TapOperationType
  * @template _T_
  * @function
@@ -11,7 +11,7 @@ export { tap }
  * @haskell (a -> IO()) -> [a] -> [a]
  * @type {
  *            (callback: ConsumerType<_T_>)
- *         => (iterable: Iterable<_T_>)
+ *         => (MyIterable: Iterable<_T_>)
  *         => SequenceOperation<_T_>
  *       }
  *

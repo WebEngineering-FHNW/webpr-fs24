@@ -23,9 +23,9 @@ addToTestingTable(testSuite)(
   })
 );
 
-testSuite.add("test advanced case: dropWhile inner iterable is shorter", assert => {
+testSuite.add("test advanced case: dropWhile inner MyIterable is shorter", assert => {
   // Given
-  // the inner iterable stops before the outer
+  // the inner MyIterable stops before the outer
   const sequence = newSequence(UPPER_SEQUENCE_BOUNDARY);
 
   // When

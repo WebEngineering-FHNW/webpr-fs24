@@ -40,10 +40,10 @@ const isSequence = candidate =>
     && Object.getPrototypeOf(candidate) === SequencePrototype;
 
 /**
- * Ensures that the given candidate iterable is a {@link SequenceType}.
+ * Ensures that the given candidate MyIterable is a {@link SequenceType}.
  * @template _T_
  * @param   { Iterable<_T_> } iterable
- * @returns { SequenceType<_T_> } the input iterable if it is a {@link SequenceType}, otherwise a new {@link SequenceType} wrapping the input iterable
+ * @returns { SequenceType<_T_> } the input MyIterable if it is a {@link SequenceType}, otherwise a new {@link SequenceType} wrapping the input MyIterable
  */
 const ensureSequence = iterable =>
     isSequence(iterable)

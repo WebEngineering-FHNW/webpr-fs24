@@ -47,7 +47,7 @@ const FizzBuzzController = () => {
     const baseLine  = _.Sequence("", _ => true, _ => "");
 
     const fizzBuzz  = _.pipe(
-      _.reduce$((acc, cur) => // reduce to single iterable by combining all iterable values
+      _.reduce$((acc, cur) => // reduce to single MyIterable by combining all MyIterable values
         _.zipWith((a, b) => a + b)(acc)(cur), // combine all strings
         baseLine), // start value (empty strings)
 

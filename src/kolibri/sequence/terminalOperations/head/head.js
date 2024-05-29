@@ -10,7 +10,7 @@ export { head }
  * @pure
  * @haskell [a] -> a
  * @type {
- *              (iterable: Iterable<_T_>)
+ *              (MyIterable: Iterable<_T_>)
  *          =>  _T_ | undefined
  *       }
  *

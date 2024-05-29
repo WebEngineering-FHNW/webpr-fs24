@@ -17,7 +17,7 @@ testSuite.add("test impurity of forEach$", assert => {
   assert.iterableEq(elements, expected);
 });
 
-testSuite.add("test empty iterable", assert => {
+testSuite.add("test empty MyIterable", assert => {
   // Given
   const expected = [];
 

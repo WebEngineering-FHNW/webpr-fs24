@@ -14,7 +14,7 @@ export { catMaybes }
  * @haskell [Maybe a] -> a
  * @template _T_
  * @type {
-              (iterable: Iterable<MaybeType<_T_>>)
+              (MyIterable: Iterable<MaybeType<_T_>>)
  *         => SequenceType<_T_>
  *       }
  *

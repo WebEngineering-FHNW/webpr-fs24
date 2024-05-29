@@ -23,7 +23,7 @@ addToTestingTable(testSuite)(
   })
 );
 
-testSuite.add("test advanced case: takeWhile inner iterable is shorter", assert => {
+testSuite.add("test advanced case: takeWhile inner MyIterable is shorter", assert => {
   // Given
   const sequence = newSequence(UPPER_SEQUENCE_BOUNDARY);
 

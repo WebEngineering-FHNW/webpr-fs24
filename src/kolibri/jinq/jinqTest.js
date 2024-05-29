@@ -8,7 +8,7 @@ import { JsonMonad }     from "../json/jsonMonad.js";
 
 const jinqSuite = TestSuite("Jinq Suite");
 
-jinqSuite.add("simple with iterable", assert => {
+jinqSuite.add("simple with MyIterable", assert => {
   // Given
   const it = Range(7);
 
@@ -22,7 +22,7 @@ jinqSuite.add("simple with iterable", assert => {
   assert.iterableEq([0, 2, 4, 6], [...result]);
 });
 
-jinqSuite.add("pairWith with iterable", assert => {
+jinqSuite.add("pairWith with MyIterable", assert => {
   // Given
   const it = Range(3);
 
@@ -42,7 +42,7 @@ jinqSuite.add("pairWith with iterable", assert => {
   assert.iterableEq([0,0,1,1,2,2,3,3], values);
 });
 
-jinqSuite.add("select with iterable", assert => {
+jinqSuite.add("select with MyIterable", assert => {
   // Given
   const it = Range(3);
 

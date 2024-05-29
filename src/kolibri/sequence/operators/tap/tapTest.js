@@ -42,7 +42,7 @@ testSuite.add("test side effect tap", assert => {
   assert.iterableEq(elements, expected);
 });
 
-testSuite.add("test empty iterable", assert => {
+testSuite.add("test empty MyIterable", assert => {
   // Given
   const expected = [];
 

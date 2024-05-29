@@ -73,7 +73,7 @@ testSuite.add("test exceed default output length (50)", assert => {
   assert.is(result.length, outputLength);
 });
 
-testSuite.add("test show of an iterable of iterables", assert => {
+testSuite.add("test show of an MyIterable of iterables", assert => {
   // Given
   const ranges = [Range(1), Range(2), Range(3)];
 
@@ -84,7 +84,7 @@ testSuite.add("test show of an iterable of iterables", assert => {
   assert.is(result, "[[0,1],[0,1,2],[0,1,2,3]]");
 });
 
-testSuite.add("test show of an empty iterable", assert => {
+testSuite.add("test show of an empty MyIterable", assert => {
   // When
   const result = show(nil);
 

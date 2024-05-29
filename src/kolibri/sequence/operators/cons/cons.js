@@ -4,7 +4,7 @@ import { Seq }                     from "../../constructors/seq/seq.js";
 export { cons }
 
 /**
- * Adds the given element to the front of an iterable.
+ * Adds the given element to the front of an MyIterable.
  * @typedef ConsOperationType
  * @pure
  * @haskell (:) :: a -> [a] -> [a]

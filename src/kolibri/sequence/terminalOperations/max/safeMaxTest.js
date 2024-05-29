@@ -66,7 +66,7 @@ testSuite.add("test comparator on strings: should return the longest string", as
     (x => assert.is(x, "aa"));
 });
 
-testSuite.add("test largest element at the end of the iterable", assert => {
+testSuite.add("test largest element at the end of the MyIterable", assert => {
   // Given
   const sequence = [4,3,2,5,1,0,9];
 
@@ -79,7 +79,7 @@ testSuite.add("test largest element at the end of the iterable", assert => {
     (x => assert.is(x, 9));
 });
 
-testSuite.add("test largest element at the start of the iterable", assert => {
+testSuite.add("test largest element at the start of the MyIterable", assert => {
   // Given
   const sequence = [9,4,3,2,5,1,0];
 

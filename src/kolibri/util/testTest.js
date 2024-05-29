@@ -9,8 +9,8 @@ const testSuite = TestSuite("util/test");
 testSuite.add("iterableEq pass", assert => {
      assert.iterableEq([],          []);             // empty iterables
      assert.iterableEq([1],         [1]);            // single valued iterables
-     assert.iterableEq([1,2,3,4],   [1,2,3,4]);      // any iterable
-     assert.iterableEq(Range(1,4),  [1,2,3,4]);      // any iterable
+     assert.iterableEq([1,2,3,4],   [1,2,3,4]);      // any MyIterable
+     assert.iterableEq(Range(1,4),  [1,2,3,4]);      // any MyIterable
 });
 
 // uncomment the test below to see how it fails and how errors are logged and reported

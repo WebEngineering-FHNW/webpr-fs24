@@ -62,12 +62,12 @@ const JsonMonad = jsObject => {
     };
 
     const and = f => {
-      // Map each element of this iterable, that might be in this maybe
+      // Map each element of this MyIterable, that might be in this maybe
       const result = maybeObj.fmap(iterable => {
         const maybeIterable = iterable.fmap(elem => {
           // f :: _T_ -> JsonMonad<SequenceType<MaybeXType<_T_>>>
           const jsonMonad = f(elem);
-          return jsonMonad.get(); // unwrap the JsonMonad to access the iterable in it.
+          return jsonMonad.get(); // unwrap the JsonMonad to access the MyIterable in it.
         });
 
         /**@type SequenceType<SequenceType> */

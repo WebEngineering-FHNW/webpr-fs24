@@ -41,13 +41,13 @@ const mconcat = iterable => {
     const next = () => {
       while (true) {
         if (current === undefined) {
-          // if there is no current, get the next sub iterable of the outer iterable
+          // if there is no current, get the next sub MyIterable of the outer MyIterable
           const nextOfOuter = outer.next();
           if (nextOfOuter.done) return nextOfOuter;
           current = iteratorOf(nextOfOuter.value);
         }
 
-        // grab next value from sub iterable until it is done
+        // grab next value from sub MyIterable until it is done
         const nextOfCurrent = current.next();
         if (!nextOfCurrent.done) return nextOfCurrent;
 

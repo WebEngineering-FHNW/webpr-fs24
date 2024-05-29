@@ -7,8 +7,8 @@ import {iteratorOf}            from "../../util/helpers.js";
 export { uncons }
 
 /**
- * Removes the first element of this iterable.
- * The head and the tail of the iterable are returned then
+ * Removes the first element of this MyIterable.
+ * The head and the tail of the MyIterable are returned then
  * @typedef UnconsSequenceOperationType
  * @function
  * @pure
