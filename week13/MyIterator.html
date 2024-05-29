@@ -6,6 +6,20 @@
 <body>
 <script>
 
+
+    const MyIterable = (currentValue, whileFn, incFn) => ({
+        [Symbol.iterator] : () => ({
+            next: () => ({
+                value: currentValue = incFn(currentValue),
+                done: ! whileFn(currentValue)
+            })
+        })
+    });
+    for(const i of MyIterable(900, x=>x<1000, x=>x+1)) {
+        console.log(i);
+    }
+    const [a,b,c]  = MyIterable("x", x=>true, x=>x+"x");
+    console.log(a,b,c);
 </script>
 </body>
 </html>
