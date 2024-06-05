@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Title</title>
+</head>
+<body>
+    <h1>Try AI</h1>
+<script>
+    const toNumber = roman => {
+        if (roman === "")  return 0;
+        const values = [
+            { roman: "IV", number: 4 },
+            { roman: "IX", number: 9 },
+            { roman: "I",  number: 1 },
+            { roman: "V",  number: 5 },
+            { roman: "X",  number: 10 }
+        ];
+        for (const value of values) {
+            if (roman.startsWith(value.roman)) {
+                return value.number + toNumber(roman.slice(value.roman.length));
+            }
+        }
+    };
+
+    document.writeln(String(toNumber("")   ===0));
+    document.writeln(String(toNumber("I")  ===1));
+    document.writeln(String(toNumber("II") ===2));
+    document.writeln(String(toNumber("III")===3));
+    document.writeln(String(toNumber("IV") ===4));
+    document.writeln(String(toNumber("V")  ===5));
+    document.writeln(String(toNumber("VI") ===6));
+    document.writeln(String(toNumber("IX") ===9));
+    document.writeln(String(toNumber("X")  ===10));
+    document.writeln(String(toNumber("XIV")===14));
+
+
+
+
+
+
+
+
+</script>
+</body>
+</html>

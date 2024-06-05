@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Kata</title>
+    </head>
+    <body>
+
+    <script>
+        const toNumber = roman => {
+            if (roman === "")           return 0;
+            if (roman.startsWith("IV")) return 4 + toNumber(roman.slice(2));
+            if (roman.startsWith("I"))  return 1 + toNumber(roman.slice(1));
+            if (roman.startsWith("V"))  return 5 + toNumber(roman.slice(1));
+        };
+        const testData = [
+            ["",    0],
+            ["I",   1],
+            ["II",  2],
+            ["III", 3],
+            ["IV",  4],
+            ["V",   5],
+            ["VI",  6],
+            // ["MCDXXXIV", 1434]
+        ];
+        testData.forEach(([roman, arabic]) => {
+            document.writeln(String(toNumber(roman) === arabic));
+        });
+    </script>
+    </body>
+</html>
